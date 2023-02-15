@@ -1,6 +1,28 @@
+header.section .inner{
+    max-width: none;
+    height: auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+
 .body__container{
     font-family: 'Roboto',sans-serif;
     font-size: 16px;
     font-weight: 400;   
     color: #333;
+}
+
+/* VISUAL */
+
+.section--visual{
+    background-image: url('../image/test-image.jpg');
+    width: 300px;
+    height: 200px;
+}
+
+.section--visual .inner{
+    display: block;
+    max-width: none;
+    padding: 80px 20px;
 }
