@@ -1,10 +1,16 @@
-header.section .inner{
+header .section .inner{
     max-width: none;
     height: auto;
     padding: 0 20px;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+}
+
 /* HEADER */
+
 
 .body__container{
     font-family: 'Roboto',sans-serif;
@@ -13,30 +19,54 @@ header.section .inner{
     color: #333;
 }
 
-.section .site-name{
-    width: 5000px;
-    height: 50px;
+.section{
+
+    border-bottom: 1px solid #333;
+}
+
+.site-name{
+    width: 50px;
+    
     display: block;
-    text-indent: -9999px;
+      
+}
+
+#search-nickname{
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 /* VISUAL */
 
+.character-info{
+    
+}
 
+.character-image{
+
+    position: relative;
+    width: 50%;    
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.character-info .pvp-info{
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    
+}
+
+
+
+.character-info li{
+    list-style: none;
+}
 .section--visual .inner{
     display: block;
     max-width: none;
     padding: 80px 20px;
-}
-
-.section--visual::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;  
-    right: 0;
-    background: rgba(0, 0, 0, .3);
 }
 
 /* FLOAT CLEARFIX */

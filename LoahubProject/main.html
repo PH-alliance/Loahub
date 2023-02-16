@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
 
 </head>
 
@@ -24,15 +25,18 @@
 
         <!-- HEADER -->
 
-        <header class="section">
+        <header class="section clearfix">
 
-            <div class="site-name">
+            <div class="site-name float--left">
                 <a href="#"><img src="./image/loahubIcon.JPG" alt="로아허브아이콘"></a>
             </div>
-            <form id="search-nickname" method="get" action="">
-                <input type="text" id="nickname" placeholder="닉네임 입력">
-                <input type="submit" value="검색">
-            </form>
+
+            <div class="search-form float--right">
+                <form id="search-nickname" method="get" action="">
+                    <input type="text" id="nickname" placeholder="닉네임 입력">
+                    <input type="submit" value="검색">
+                </form>
+            </div>
 
         </header>
 
@@ -41,44 +45,50 @@
         <!-- VISUAL -->
         <section class="section section--visual">
             <div class="inner clearfix">
-                <div class="character-image">
-                    <img src="test-image.jpg" alt="캐릭터이미지">
+                <div class="character-info">
+                    <div class="character-image float--left">
+                        <img src="./image/test-avatar.png" alt="캐릭터이미지">
+                    </div>
+
+                    <div class="pvp-info float--right">
+                        <ul>
+                            <li>
+                                <p class="seasonname">시즌: </p>
+                            </li>
+                            <li>
+                                <p class="competitive">경쟁전:
+                                <div class="rank">순위: </div>
+                                <div class="rankname">랭크: </div>
+                                <img class="Rankicon" src="#" alt="랭크아이콘">
+                                <div class="ranklastmmr">시즌 마감 mmr: </div>
+                                <div class="playcount">플레이 횟수:</div>
+                                <div class="victorycount">승리 수: </div>
+                                <div class="losecount">패배 수: </div>
+                                <div class="tiecount">타이 카운트: </div>
+                                <div class="killcount">킬 수: </div>
+                                <div class="acecount">에이스 횟수: </div>
+                                <div class="deathcount">데스 수: </div>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="teamdeathmatch">팀 데스매치:</p>
+                            </li>
+                            <li>
+                                <p class="deathmatch">데스매치: </p>
+                            </li>
+                            <li>
+                                <p class="teamelimination">올킬 횟수: </p>
+                            </li>
+                            <li>
+                                <p class="coopbattle">coopbattle?</p>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                <div class="character-info float--right">
-                    <ul>
-                        <li>
-                            <p class="seasonname">시즌: </p>
-                        </li>
-                        <li>
-                            <p class="competitive">경쟁전:
-                            <div class="rank">순위: </div>
-                            <div class="rankname">랭크: </div>
-                            <img class="Rankicon" src="#" alt="랭크아이콘">
-                            <div class="ranklastmmr">시즌 마감 mmr: </div>
-                            <div class="playcount">플레이 횟수:</div>
-                            <div class="victorycount">승리 수: </div>
-                            <div class="losecount">패배 수: </div>
-                            <div class="tiecount">타이 카운트: </div>
-                            <div class="killcount">킬 수: </div>
-                            <div class="acecount">에이스 횟수: </div>
-                            <div class="deathcount">데스 수: </div>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="teamdeathmatch">팀 데스매치:</p>
-                        </li>
-                        <li>
-                            <p class="deathmatch">데스매치: </p>
-                        </li>
-                        <li>
-                            <p class="teamelimination">올킬 횟수: </p>
-                        </li>
-                        <li>
-                            <p class="coopbattle">coopbattle?</p>
-                        </li>
-                    </ul>
-                </div>
+
+
             </div>
         </section>
 
