@@ -53,16 +53,18 @@ body{
 
 .character-image{
 
-    position: relative;
+    
     width: 50%;    
     box-sizing: border-box;
     overflow: hidden;
 }
 
-.character-info .pvp-info{
-    position: relative;
+.pvp-info{
+    font-size:17px;
     width: 40%;
+    margin-bottom: 20px;
     box-sizing: border-box;
+    
     
 }
 
