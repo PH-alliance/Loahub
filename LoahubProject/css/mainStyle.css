@@ -1,0 +1,66 @@
+header .section .inner{
+    max-width: none;
+    height: auto;
+    padding: 0 20px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+
+.body__container{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    font-weight: 400;   
+    color: #333;
+}
+
+.section{
+    position: relative;
+    border-bottom: 1px solid #333;
+}
+
+.site-name{
+    width: 50px;   
+    display: block;
+      
+}
+
+
+
+
+
+
+/* VISUAL */
+
+.search-form{
+    padding-top: 20px;
+    
+}
+
+
+
+.section--visual .inner{
+    display: block;
+    max-width: none;
+    padding: 20px 20px;
+}
+
+/* FLOAT CLEARFIX */
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.float--left{
+    float: left;
+}
+
+.float--right{
+    float: right;
+}
