@@ -20,7 +20,7 @@ body{
 }
 
 .section{
-
+    position: relative;
     border-bottom: 1px solid #333;
 }
 
@@ -49,9 +49,6 @@ body{
     font-size: 30px;
     padding-bottom: 40px;
     padding-left: 50%;
-    
-    align-items: center;
-    
 }
 
 .character-image{
