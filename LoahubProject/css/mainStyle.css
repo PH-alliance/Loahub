@@ -21,17 +21,14 @@ body{
 
 .section{
     position: relative;
-    border-bottom: 1px solid #333;
+    
 }
 
 .site-name{
     width: 50px;   
     display: block;
-      
+    
 }
-
-
-
 
 
 
@@ -39,9 +36,21 @@ body{
 
 .search-form{
     padding-top: 20px;
-    
+    padding-left: 40%;
+    border-top: 1px solid #333;
 }
 
+input[type=text]{
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+}
+
+input[type=submit]{
+    width: 50px;
+    height: 30px;
+    font-size: 16px;
+}
 
 
 .section--visual .inner{
