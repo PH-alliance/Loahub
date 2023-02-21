@@ -28,16 +28,25 @@ body{
     width: 50px;   
     display: block;
     
+    
 }
 
 
 
 /* VISUAL */
 
+#wrapper{
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 80px;
+}
+
 .search-form{
+    height: 200px;
     padding-top: 20px;
     padding-left: 40%;
     border-top: 1px solid #333;
+    background-color: aqua;
 }
 
 input[type=text]{
@@ -52,11 +61,34 @@ input[type=submit]{
     font-size: 16px;
 }
 
+.another{
+    
+    width: 70%;
+    background-color: blue;
+    
+}
+
 
 .section--visual .inner{
     display: block;
     max-width: none;
     padding: 20px 20px;
+}
+
+/* ASIDE */
+aside{
+    width: 30%;
+    margin-left: 70%;
+    background-color: brown;
+    transform: translateY(-100%);
+}
+
+/* FOOTER */
+footer{
+    height: 80px;
+    position: relative;
+    transform: translateY(-100%);
+    background-color: #333;
 }
 
 /* FLOAT CLEARFIX */

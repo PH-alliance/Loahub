@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -19,25 +19,44 @@
 </head>
 
 <body>
-    <div class="body__container">
-        <!-- HEADER -->
-        <header class="section clearfix">
-            <div class="site-name">
-                <img src="./image/loahubIcon.JPG" alt="로아허브아이콘">
-            </div>
+    <div id="wrapper">
+        <div class="body__container">
+            <!-- HEADER -->
+            <header class="section clearfix">
+                <div class="site-name">
+                    <img src="./image/loahubIcon.JPG" alt="로아허브아이콘">
+                </div>
+            </header>
+            <!-- VISUAL -->
+            <section class="section section--visual clearfix">
+                <div class="search-form">
+                    <form id="search-nickname" method="get" action="">
+                        <input type="text" id="nickname" placeholder="닉네임 입력">
+                        <input type="submit" value="검색">
+                    </form>
 
-        </header>
+                </div>
 
+                <!-- 추후에 삽입할 내용 -->
+                <div class="another">
+                    <img src="./image/test-image.jpg" alt="테스트이미지">
+                </div>
 
-
-        <!-- VISUAL -->
-        <div class="search-form">
-            <form id="search-nickname" method="get" action="">
-                <input type="text" id="nickname" placeholder="닉네임 입력">
-                <input type="submit" value="검색">
-            </form>
+                <aside>
+                    <div class="site-ad ">
+                        <img src="./image/test-image.jpg" alt="">
+                    </div>
+                </aside>
 
         </div>
+        </section>
+        <!-- FOOTER -->
+        <footer class="section">
+            <div class="inner clearfix">
+                footer내용
+            </div>
+        </footer>
+    </div>
     </div>
 
 </body>
