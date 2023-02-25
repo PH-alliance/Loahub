@@ -3,12 +3,16 @@
 <html xmlns:th="http://www.thymeleaf.org"></html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Loahub</title>
 </head>
 <body>
 
-<h1>Loahub Colosseum System</h1>
+<h1>검색할 닉네임 입력</h1>
+<input id = "nickName" value="" type = "text">
+<button id = "search" th:href="@{/loahub/api/{characterName}}" href="#">검색</button>
+<script src = "https://code.jquery.com/jquery-3.6.3.js"></script>
 
-<a th:href="@{/colosseum}" href ="#">Character's colosseums</a>
+<script>
+</script>
 </body>
 </html>

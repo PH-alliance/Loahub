@@ -1,3 +1,4 @@
+/*
 package com.example.Loahub.model.network;
 
 import lombok.AllArgsConstructor;
@@ -15,7 +16,7 @@ public class Header<T> {
     private Integer rank;
     private Integer preRank;
     private Integer exp;
-    private List<T> colosseum;
+    private T data;
     private String description;
 
     public static <T> Header<T> OK(){
@@ -26,12 +27,12 @@ public class Header<T> {
                 .build();
     }
 
-    public static <T> Header<T> OK(T colosseum){
+    public static <T> Header<T> OK(T data){
         return (Header<T>)Header.builder()
                 .rank(0)
                 .preRank(0)
                 .exp(0)
-                .colosseum()
+                .data(data)
                 .build();
     }
 
@@ -41,3 +42,4 @@ public class Header<T> {
                 .build();
     }
 }
+*/

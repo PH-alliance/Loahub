@@ -5,10 +5,13 @@ import lombok.Data;
 public class ColosseumResponseDto {
     private String seasonName;
     private Competitive[] competitive;
+    private TeamDeathmatch[] teamDeathmatches;
     private Deathmatch[] deathmatch;
+    private TeamElimination[]     teamElimination;
+    private CoOpBattle[] coOpBattle;
 
     @Data
-    static class Competitive{
+    class Competitive{
         private Integer rank;
         private String rankName;
         private String rankIcon;
@@ -23,7 +26,47 @@ public class ColosseumResponseDto {
     }
 
     @Data
-    static class Deathmatch{
+    class TeamDeathmatch{
+        private Integer playCount;
+        private Integer victoryCount;
+        private Integer loseCount;
+        private Integer tieCount;
+        private Integer killCount;
+        private Integer aceCount;
+        private Integer deathCount;
+    }
+
+    @Data
+    class Deathmatch{
+        private Integer playCount;
+        private Integer victoryCount;
+        private Integer loseCount;
+        private Integer tieCount;
+        private Integer killCount;
+        private Integer aceCount;
+        private Integer deathCount;
+    }
+
+    @Data
+    class TeamElimination {
+        private Integer firstWinCount;
+        private Integer secondWinCount;
+        private Integer thirdWinCount;
+        private Integer firstPlayCount;
+        private Integer secondPlayCount;
+        private Integer thirdPlayCount;
+        private Integer allKillCount;
+        private Integer playCount;
+        private Integer victoryCount;
+        private Integer loseCount;
+        private Integer tieCount;
+        private Integer killCount;
+        private Integer aceCount;
+        private Integer deathCount;
+    }
+
+    @Data
+    class CoOpBattle{
         private Integer playCount;
         private Integer victoryCount;
         private Integer loseCount;
