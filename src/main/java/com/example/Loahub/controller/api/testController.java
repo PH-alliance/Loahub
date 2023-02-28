@@ -1,25 +1,25 @@
-package com.example.Loahub.controller.api;
+// package com.example.Loahub.controller.api;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+// import org.springframework.stereotype.Controller;
+// import org.springframework.web.bind.annotation.GetMapping;
+// import org.springframework.web.bind.annotation.RequestMapping;
+// import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Loahub.service.ColosseumsApiClient;
+// import com.example.Loahub.service.ColosseumsApiClient;
 
-import lombok.RequiredArgsConstructor;
+// import lombok.RequiredArgsConstructor;
 
-@Controller
-@RequiredArgsConstructor
-@RequestMapping("/")
+// @Controller
+// @RequiredArgsConstructor
+// @RequestMapping("/")
 
-public class testController {
+// public class testController {
 
-    private final ColosseumsApiClient colosseumsApiClient;
+// private final ColosseumsApiClient colosseumsApiClient;
 
-    @GetMapping("/pvp")
-    public String search() {
-        return "searchDisplay";
-    }
+// @GetMapping("/pvp")
+// public String search() {
+// return "searchDisplay";
+// }
 
-}
+// }
