@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
-
+<!-- 
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Lacheln&pgh">
-    <meta name="description" content="로스트아크 공식 api를 이용한 프로젝트">
+    <meta name="description" content="로스트아크 공식 api를 이용한 프로젝트"> -->
 
     <!--구글 폰트 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="HtmlCss/mainStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/src/main/resources/static/HtmlCss/mainStyle.css" type="text/css">
 
 </head>
 
@@ -23,7 +23,7 @@
         <div class="body__container">
             <!-- HEADER -->
             <header class="section clearfix">
-                <div class="site-name">
+                <div class="site-name" style="background-color: orange;">
                     <img src="./image/loahubIcon.JPG" alt="로아허브아이콘">
                 </div>
             </header>
@@ -33,7 +33,7 @@
 
 
                     <form id="search-nickname" method="get" action="/loahub/pvp">
-                        <input type="text" id="nickname" placeholder="닉네임 입력">
+                        <input type="text" id="nickname" name="nickname" placeholder="닉네임 입력">
                         <input type="submit" value="검색">
                         <a href="/pvp">asdf</a>
 

@@ -27,14 +27,15 @@
         <!-- HEADER -->
 
         <header class="section clearfix">
-            <p th:text="${data}">asdf</p>
+            <p th:text="${nickname}">asdf</p>
+            <p th:text="${information}">asdf</p>
             <div class="site-name float--left">
                 <a href="#"><img src="./image/loahubIcon.JPG" alt="로아허브아이콘"></a>
             </div>
 
             <div class="search-form float--right">
                 <form id="search-nickname" method="get" action="https://localhost:8080/loahub/api/pvp">
-                    <input type="text" id="nickname" placeholder="닉네임 입력">
+                    <input type="text" id="nickname" name="nickname" placeholder="닉네임 입력">
                     <input type="submit" value="검색">
 
                 </form>
