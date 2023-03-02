@@ -1,0 +1,94 @@
+header .section .inner{
+    max-width: none;
+    height: auto;
+    padding: 0 20px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+
+.body__container{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    font-weight: 400;   
+    color: #333;
+}
+
+.section{
+    position: relative;
+    border-bottom: 1px solid #333;
+}
+
+.site-name{
+    width: 50px;   
+    display: block;
+      
+}
+
+.search-form{
+    padding-top: 90px;
+    padding-right: 90px;
+   
+}
+
+
+
+
+/* VISUAL */
+
+.character-info{
+    
+}
+
+.character-nickname{
+    font-size: 30px;
+    padding-bottom: 40px;
+    padding-left: 50%;
+}
+
+.character-image{
+
+    
+    width: 50%;    
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.pvp-info{
+    font-size:17px;
+    width: 40%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    
+    
+}
+
+
+.character-info li{
+    list-style: none;
+}
+.section--visual .inner{
+    display: block;
+    max-width: none;
+    padding: 20px 20px;
+}
+
+/* FLOAT CLEARFIX */
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.float--left{
+    float: left;
+}
+
+.float--right{
+    float: right;
+}
