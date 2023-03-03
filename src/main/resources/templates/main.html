@@ -14,7 +14,7 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="/src/main/resources/static/HtmlCss/mainStyle.css" type="text/css">
+    <link rel="stylesheet" th:href="@{/HtmlCss/main.css}" type="text/css">
 
 </head>
 
@@ -24,7 +24,7 @@
             <!-- HEADER -->
             <header class="section clearfix">
                 <div class="site-name" style="background-color: orange;">
-                    <img src="./image/loahubIcon.JPG" alt="로아허브아이콘">
+                    <img th:src="@{/image/loahubIcon.JPG}" alt="로아허브아이콘">
                 </div>
             </header>
             <!-- VISUAL -->
