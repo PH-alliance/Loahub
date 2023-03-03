@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -25,13 +25,15 @@
             <header class="section clearfix">
                 <div class="site-name">
                     <img src="./image/loahubIcon.JPG" alt="로아허브아이콘">
+                    <p th:text="${rank}"></p>
+                    <p th:text="${rankName}"></p>
                 </div>
             </header>
             <!-- VISUAL -->
             <section class="section section--visual clearfix">
                 <div class="search-form">
-                    <form id="search-nickname" method="get" action="">
-                        <input type="text" id="nickname" placeholder="닉네임 입력">
+                    <form id="search-nickname" method="post" action="/loahub/pvp">
+                        <input type="text" id="nickname" name ="nickname" placeholder="닉네임 입력">
                         <input type="submit" value="검색">
                     </form>
 

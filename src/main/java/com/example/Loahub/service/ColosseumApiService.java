@@ -21,17 +21,17 @@ public class ColosseumApiService {
         UserTest user = new UserTest();
         UserTest.builder()
                 .name(characterName)
-                .rank((JSONObject) competitive.get("Rank"))
-                .rankName((JSONObject)competitive.get("Rankname"))
-                .rankIcon((JSONObject)competitive.get("RankIcon"))
-                .rankLastMmr((JSONObject)competitive.get("RankLastMmr"))
-                .playCount((JSONObject)competitive.get("PlayCount"))
-                .victoryCount((JSONObject)competitive.get("VictoryCount"))
-                .loseCount((JSONObject)competitive.get("LoseCount"))
-                .tieCount((JSONObject)competitive.get("TieCount"))
-                .killCount((JSONObject)competitive.get("KillCount"))
-                .aceCount((JSONObject)competitive.get("AceCount"))
-                .deathCount((JSONObject)competitive.get("DeathCount")).build();
+                .rank(Integer.parseInt(String.valueOf(competitive.get("Rank"))))
+                .rankName((String)competitive.get("Rankname"))
+                .rankIcon((String)competitive.get("RankIcon"))
+                .rankLastMmr(Integer.parseInt(String.valueOf(competitive.get("RankLastMmr"))))
+                .playCount(Integer.parseInt(String.valueOf(competitive.get("PlayCount"))))
+                .victoryCount(Integer.parseInt(String.valueOf(competitive.get("VictoryCount"))))
+                .loseCount(Integer.parseInt(String.valueOf(competitive.get("LoseCount"))))
+                .tieCount(Integer.parseInt(String.valueOf(competitive.get("TieCount"))))
+                .killCount(Integer.parseInt(String.valueOf(competitive.get("KillCount"))))
+                .aceCount(Integer.parseInt(String.valueOf(competitive.get("AceCount"))))
+                .deathCount(Integer.parseInt(String.valueOf(competitive.get("DeathCount")))).build();
 
                UserTest newUser = userRepository.save(user);
                return newUser;

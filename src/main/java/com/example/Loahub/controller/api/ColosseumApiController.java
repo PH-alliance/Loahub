@@ -17,16 +17,30 @@ public class ColosseumApiController {
     @Autowired
     ColosseumApiService colosseumApiService;
 
-    @PostMapping("")
+    @PostMapping("/pvp")
     public UserTest create(HttpServletRequest request) throws ParseException{
         String characterName = request.getParameter("nickname");
+        /*if(characterName == null){
+            characterName = "깜찍쁘띠";
+        }*/
         return colosseumApiService.create(characterName);
     }
 
 
     @GetMapping("/pvp")
     public String search(UserTest user, Model model) throws ParseException{
-        model.addAttribute("user",model);
+        model.addAttribute("rank",user.getRank());
+        model.addAttribute("rankName",user.getRankName());
+        model.addAttribute("rankIcon",user.getRankIcon());
+        model.addAttribute("rankLastMmr",user.getRankLastMmr());
+        model.addAttribute("playCount",user.getPlayCount());
+        model.addAttribute("victoryCount",user.getVictoryCount());
+        model.addAttribute("loseCount",user.getLoseCount());
+        model.addAttribute("tieCount",user.getTieCount());
+        model.addAttribute("killCount",user.getKillCount());
+        model.addAttribute("aceCount",user.getAceCount());
+        model.addAttribute("deathCount",user.getDeathCount()) ;
+
         return "searchDisplay";
     }
 }

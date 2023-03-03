@@ -44,7 +44,7 @@ public class ColosseumsApiClient {
             while((line = br.readLine()) != null){
                 result += line;
             }
-            System.out.println("response body : " + result);
+           // System.out.println("response body : " + result);
 
             br.close();
 
@@ -58,16 +58,18 @@ public class ColosseumsApiClient {
 
             JSONParser parser = new JSONParser();
             JSONObject object = (JSONObject) parser.parse(result);
-            JSONArray colArr = (JSONArray) object.get("colosseums");
+            JSONArray colArr = (JSONArray) object.get("Colosseums");
+            //colArr 값 확인
 
-           /* for(int i = 0; i<colArr.size(); i++){
+        /*
+            //NullPointerException 발생 구간. colArr가 널값이라 colArr.size()를 인식할수없다. 왜 널값이 뜨는지에 대해 찾아야함.
+            for(int i = 0; i<colArr.size(); i++){
                 object = (JSONObject) colArr.get(i);
             }
-            */
-
+*/
             JSONObject season3 = (JSONObject) colArr.get(3);
             JSONObject competitive = (JSONObject) season3.get("Competitive");
-
+            System.out.println(competitive);
         return competitive;
     }
 }

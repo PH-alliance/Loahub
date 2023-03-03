@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.w3.org/1999/XSL/Transform">
 
 <head>
     <meta charset="UTF-8">
@@ -27,6 +27,8 @@
         <!-- HEADER -->
 
         <header class="section clearfix">
+            <p th:text="${rank}"></p>
+            <p th:text="${rankName}"></p>
 
             <div class="site-name float--left">
                 <a href="#"><img src="./image/loahubIcon.JPG" alt="로아허브아이콘"></a>
@@ -62,14 +64,14 @@
                             </li>
                             <li>
                                 <p class="competitive">경쟁전: </p>
-                                <p class="rank">순위: </p>
-                                <p class="rankname">랭크: </p>
+                                <p class="rank">순위:</p>
+                                <p class="rankname">랭크:</p>
                                 <img class="Rankicon" src="#" alt="랭크아이콘">
                                 <p class="ranklastmmr">시즌 마감 mmr: </p>
-                                <p class="playcount">플레이 횟수:</p>
-                                <p class="victorycount">승리 수: </p>
+                                <p class="playcount">플레이 횟수: </p>
+                                <p class="victorycount">승리 수:  </p>
                                 <p class="losecount">패배 수: </p>
-                                <p class="tiecount">타이 카운트: </p>
+                                <p class="tiecount">타이 카운트:</p>
                                 <p class="killcount">킬 수: </p>
                                 <p class="acecount">에이스 횟수: </p>
                                 <p class="deathcount">데스 수: </p>

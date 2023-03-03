@@ -22,17 +22,17 @@ public class UserTest {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private JSONObject rank;
-    private JSONObject rankName;
-    private JSONObject rankIcon;
-    private JSONObject rankLastMmr;
-    private JSONObject playCount;
-    private JSONObject victoryCount;
-    private JSONObject loseCount;
-    private JSONObject tieCount;
-    private JSONObject killCount;
-    private JSONObject aceCount;
-    private JSONObject deathCount;
+    private Integer rank;
+    private String rankName;
+    private String rankIcon;
+    private Integer rankLastMmr;
+    private Integer playCount;
+    private Integer victoryCount;
+    private Integer loseCount;
+    private Integer tieCount;
+    private Integer killCount;
+    private Integer aceCount;
+    private Integer deathCount;
 
     /*
     //추가기능
