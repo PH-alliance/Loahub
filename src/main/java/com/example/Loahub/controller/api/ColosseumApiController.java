@@ -12,6 +12,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -53,7 +54,7 @@ public class ColosseumApiController {
                 sb.append(br.readLine());
                 
             }
-        model.addAttribute("information", sb);
+        model.addAttribute("seasonName", sb.charAt(1761));
         }catch(Exception e){
             e.printStackTrace();
         }
