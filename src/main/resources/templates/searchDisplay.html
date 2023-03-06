@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./HtmlCss/searchStyle.css">
+    <link rel="stylesheet" th:href="@{/HtmlCss/searchDisplay.css}">
 
 
 </head>
@@ -27,8 +27,7 @@
         <!-- HEADER -->
 
         <header class="section clearfix">
-            <p th:text="${nickname}">asdf</p>
-            <p th:text="${information}">asdf</p>
+        
             <div class="site-name float--left">
                 <a href="#"><img src="./image/loahubIcon.JPG" alt="로아허브아이콘"></a>
             </div>

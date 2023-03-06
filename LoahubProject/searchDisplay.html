@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/searchStyle.css">
+    <link rel="stylesheet" th:href="@{/HtmlCss/searchStyle.css}" type="text/css">
 
 
 </head>
@@ -29,7 +29,7 @@
         <header class="section clearfix">
 
             <div class="site-name float--left">
-                <a href="#"><img src="./image/loahubIcon.JPG" alt="로아허브아이콘"></a>
+                <a href="#"><img th:src="@{src\main\resources\static\image\loahubIcon.JPG}" alt="로아허브아이콘"></a>
             </div>
 
             <div class="search-form float--right">
@@ -52,7 +52,7 @@
                         닉네임
                     </div>
                     <div class="character-image float--left">
-                        <img src="./image/test-avatar.png" alt="캐릭터이미지">
+                        <img th:src="@{/image/loahubIcon.JPG}" alt="캐릭터이미지">
                     </div>
 
                     <div class="pvp-info float--right">
