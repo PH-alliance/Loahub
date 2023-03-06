@@ -57,6 +57,8 @@ public class ColosseumApiController {
         }catch(Exception e){
             e.printStackTrace();
         }
+
+       
         
         model.addAttribute("nickname", nickname);
         

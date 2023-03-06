@@ -51,10 +51,11 @@ body{
     padding-left: 50%;
 }
 
-.character-image{
+.character-info .character-image{
 
     
-    width: 50%;    
+    width: 100%;
+    height: 708px;    
     box-sizing: border-box;
     overflow: hidden;
 }
