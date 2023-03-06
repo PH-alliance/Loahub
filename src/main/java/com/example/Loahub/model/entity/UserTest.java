@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.json.simple.JSONObject;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,8 +20,9 @@ public class UserTest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private Integer rank;
+
+    private String characterName;
+    private Integer ranking;
     private String rankName;
     private String rankIcon;
     private Integer rankLastMmr;

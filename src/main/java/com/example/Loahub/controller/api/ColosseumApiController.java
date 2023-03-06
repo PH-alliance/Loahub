@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/loahub")
+@RequestMapping("loahub")
 public class ColosseumApiController {
     @Autowired
     ColosseumApiService colosseumApiService;
@@ -29,7 +29,7 @@ public class ColosseumApiController {
 
     @GetMapping("/pvp")
     public String search(UserTest user, Model model) throws ParseException{
-        model.addAttribute("rank",user.getRank());
+        model.addAttribute("rank",user.getRanking());
         model.addAttribute("rankName",user.getRankName());
         model.addAttribute("rankIcon",user.getRankIcon());
         model.addAttribute("rankLastMmr",user.getRankLastMmr());

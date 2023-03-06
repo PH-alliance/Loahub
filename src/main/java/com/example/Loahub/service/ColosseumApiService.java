@@ -20,8 +20,8 @@ public class ColosseumApiService {
 
         UserTest user = new UserTest();
         UserTest.builder()
-                .name(characterName)
-                .rank(Integer.parseInt(String.valueOf(competitive.get("Rank"))))
+                .characterName(characterName)
+                .ranking(Integer.parseInt(String.valueOf(competitive.get("Rank"))))
                 .rankName((String)competitive.get("Rankname"))
                 .rankIcon((String)competitive.get("RankIcon"))
                 .rankLastMmr(Integer.parseInt(String.valueOf(competitive.get("RankLastMmr"))))
