@@ -25,7 +25,7 @@
     <div class="body__container">
 
         <!-- HEADER -->
-
+       
         <header class="section clearfix">
         
             <div class="site-name float--left">
@@ -59,23 +59,46 @@
 
                     <div class="pvp-info float--right">
                         <ul>
-                            <p></p>
-                            <div>
-                                <div class="seasonname">시즌: <div th:text="${seasonName}"></div></div>
-                            </div>
+                            
                             <li>
-                                <p class="competitive">경쟁전: </p>
-                                <p class="rank">순위: </p>
-                                <p class="rankname">랭크: </p>
+                                <div class="seasonname">시즌:
+                                    <div th:text="${seasonName}"></div>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <p class="competitive">경쟁전 </p>
+                                <p class="rank">순위:
+                                    <p th:text="${rank}"></p> 
+                                </p>
+                                <p class="rankname">랭크: 
+                                    <p th:text="${rankname}"></p>
+                                </p>
                                 <img class="Rankicon" src="#" alt="랭크아이콘">
-                                <p class="ranklastmmr">시즌 마감 mmr: </p>
-                                <p class="playcount">플레이 횟수:</p>
-                                <p class="victorycount">승리 수: </p>
-                                <p class="losecount">패배 수: </p>
-                                <p class="tiecount">타이 카운트: </p>
-                                <p class="killcount">킬 수: </p>
-                                <p class="acecount">에이스 횟수: </p>
-                                <p class="deathcount">데스 수: </p>
+                                <p class="ranklastmmr">시즌 마감 mmr: 
+                                    <p th:text="${ranklastmmr}"></p>
+                                </p>
+                                <p class="playcount">플레이 횟수:
+                                    <p th:text="${playcount}"></p>
+                                </p>
+                                <p class="victorycount">승리 수: 
+                                    <p th:text="${victorycount}"></p>
+                                </p>
+                                <p class="losecount">패배 수: 
+                                    <p th:text="${losecount}"></p>
+                                </p>
+                                <p class="tiecount">타이 카운트: 
+                                    <p th:text="${tiecount}"></p>
+                                </p>
+                                <p class="killcount">킬 수: 
+                                    <p th:text="${killcount}"></p>
+                                </p>
+                                <p class="acecount">에이스 횟수: 
+                                    <p th:text="acecount"></p>
+                                </p>
+                                <p class="deathcount">데스 수: 
+                                    <p th:text="deathcount"></p>
+                                </p>
 
                             </li>
                             <li>

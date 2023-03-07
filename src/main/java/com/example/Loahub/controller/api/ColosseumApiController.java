@@ -11,10 +11,13 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
-
+import java.security.KeyStore.Entry.Attribute;
 
 import javax.servlet.http.HttpServletRequest;
 
+
+import org.apache.tomcat.util.json.JSONParser;
+import org.springframework.boot.json.JsonParser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +26,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.thymeleaf.engine.AttributeName;
 
 @Controller
 @RequiredArgsConstructor
@@ -55,11 +59,15 @@ public class ColosseumApiController {
                 
             }
         model.addAttribute("seasonName", sb.charAt(1761));
+        model.addAttribute("rank", sb.substring(1786,1791));
+        model.addAttribute("rankname", sb.substring(1804,1807));
+        
         }catch(Exception e){
             e.printStackTrace();
         }
 
        
+
         
         model.addAttribute("nickname", nickname);
         
