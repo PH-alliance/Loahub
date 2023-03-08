@@ -1,5 +1,7 @@
 package com.example.Loahub.controller.api;
 import com.example.Loahub.model.entity.UserTest;
+import com.example.Loahub.model.network.Header;
+import com.example.Loahub.model.network.request.ColosseumRequestDto;
 import com.example.Loahub.service.ColosseumApiService;
 import lombok.RequiredArgsConstructor;
 import org.json.simple.parser.ParseException;
@@ -12,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("loahub")
+@RequestMapping("/loahub")
 public class ColosseumApiController {
     @Autowired
     ColosseumApiService colosseumApiService;

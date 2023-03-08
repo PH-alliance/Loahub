@@ -24,6 +24,7 @@ public class ColosseumsApiClient {
 
         try{
             //캐릭터이름을 url에 보내기위해 아스키코드로 인코딩
+            System.out.println(characterName);
             String encodeRes = URLEncoder.encode(characterName, "UTF-8");
             //헤더를 포함한 Url 만들기
             URL url = new URL(reqURL + encodeRes + "/colosseums");

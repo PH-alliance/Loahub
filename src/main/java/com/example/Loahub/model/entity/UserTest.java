@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,6 +16,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Builder
 @Entity
+@Accessors(chain = true)
 public class UserTest {
 
     @Id
@@ -41,4 +43,19 @@ public class UserTest {
     private Integer searchCount; //검색된 횟수
     // Todo : 그래프기능 추가
      */
+
+    public UserTest (String characterName, Integer ranking, String rankName, String rankIcon, Integer rankLastMmr, Integer playCount,
+                             Integer victoryCount, Integer loseCount, Integer tieCount, Integer killCount, Integer aceCount, Integer deathCount){
+        this.characterName = characterName;
+        this.ranking = ranking;
+        this.rankIcon = rankIcon;
+        this.rankLastMmr = rankLastMmr;
+        this.playCount = playCount;
+        this.victoryCount = victoryCount;
+        this.loseCount = loseCount;
+        this.tieCount = tieCount;
+        this.killCount = killCount;
+        this.aceCount = aceCount;
+        this.deathCount = deathCount;
+    }
 }
