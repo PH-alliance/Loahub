@@ -61,6 +61,8 @@ public class ColosseumApiController {
         model.addAttribute("seasonName", sb.charAt(1761));
         model.addAttribute("rank", sb.substring(1786,1791));
         model.addAttribute("rankname", sb.substring(1804,1807));
+
+        System.out.println(sb.substring(1786,1791));
         
         }catch(Exception e){
             e.printStackTrace();

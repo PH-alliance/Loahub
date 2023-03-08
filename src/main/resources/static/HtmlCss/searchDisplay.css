@@ -60,9 +60,7 @@ body{
     overflow: hidden;
 }
 
-.seasonname{
-    white-space:normal;
-}
+
 .pvp-info{
     font-size:17px;
     width: 40%;
@@ -71,7 +69,9 @@ body{
     
     
 }
-
+.seasonname{
+    display: flex;
+}
 
 .character-info li{
     list-style: none;
