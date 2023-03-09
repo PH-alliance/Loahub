@@ -58,23 +58,29 @@ public class ColosseumApiController {
         BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(),"UTF-8"));         
         result = br.readLine();
          
-            
+        //시즌3의 데이터 가져오기     
         org.json.simple.parser.JSONParser jsonParser = new org.json.simple.parser.JSONParser();
         JSONObject jsonObject =(JSONObject)jsonParser.parse(result);
         JSONArray colosseums = (JSONArray)jsonObject.get("Colosseums");
         JSONObject season_3 = (JSONObject)colosseums.get(3);
 
+        // 시즌3 데이터 중 competitive의 데이터들 가져오기
         JSONObject season_3_competitive=(JSONObject)season_3.get("Competitive");
 
-        String season_3_seasonname = (String)season_3.get("SeasonName");
-        String season_3_competitive_rankname = (String)season_3_competitive.get("RankName");
-        // JSONArray colosseums_competitive = (JSONArray)season_3.get("Competitive");
-        
-        
+        // 시즌3 competitive 요소들 출력 
+        model.addAttribute("seasonName", season_3.get("SeasonName"));    
+        model.addAttribute("rank",season_3_competitive.get("Rank"));  
+        model.addAttribute("rankName", season_3_competitive.get("RankName"));
+        model.addAttribute("rankIcon", season_3_competitive.get("RankIcon"));
+        model.addAttribute("ranklastmmr", season_3_competitive.get("RankLastMmr"));
+        model.addAttribute("playcount", season_3_competitive.get("PlayCount"));
+        model.addAttribute("victorycount", season_3_competitive.get("VictoryCount"));
+        model.addAttribute("losecount", season_3_competitive.get("LoseCount"));
+        model.addAttribute("tiecount", season_3_competitive.get("TieCount"));
+        model.addAttribute("killcount", season_3_competitive.get("KillCount"));
+        model.addAttribute("acecount", season_3_competitive.get("AceCount"));
+        model.addAttribute("deathcount", season_3_competitive.get("DeathCount"));
 
-
-        model.addAttribute("seasonName", season_3_seasonname);
-        model.addAttribute("rankName", season_3_competitive_rankname);
         
         
         }catch(Exception e){

@@ -59,14 +59,10 @@
 
                     <div class="pvp-info float--right">
                         <ul>
-                            
                             <li>
                                 <div class="seasonname">시즌:
                                     <div th:text="${seasonName}"></div>
                                 </div>
-                                
-                            </li>
-                            <li>
                                 <p class="competitive">경쟁전 </p>
                                 <p class="rank">순위:
                                     <p th:text="${rank}"></p> 
@@ -74,7 +70,9 @@
                                 <p class="rankname">랭크: 
                                     <p th:text="${rankName}"></p>
                                 </p>
-                                <img class="Rankicon" src="#" alt="랭크아이콘">
+                                
+                                <img class="Rankicon" th:src="${rankIcon}" alt="랭크아이콘">
+                                                          
                                 <p class="ranklastmmr">시즌 마감 mmr: 
                                     <p th:text="${ranklastmmr}"></p>
                                 </p>
@@ -94,10 +92,10 @@
                                     <p th:text="${killcount}"></p>
                                 </p>
                                 <p class="acecount">에이스 횟수: 
-                                    <p th:text="acecount"></p>
+                                    <p th:text="${acecount}"></p>
                                 </p>
                                 <p class="deathcount">데스 수: 
-                                    <p th:text="deathcount"></p>
+                                    <p th:text="${deathcount}"></p>
                                 </p>
 
                             </li>

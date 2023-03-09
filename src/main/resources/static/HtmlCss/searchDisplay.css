@@ -66,13 +66,14 @@ body{
     width: 40%;
     margin-bottom: 20px;
     box-sizing: border-box;
+   
     
     
-}
-.seasonname{
-    display: flex;
 }
 
+ul{
+    display: flex;
+}
 .character-info li{
     list-style: none;
 }
