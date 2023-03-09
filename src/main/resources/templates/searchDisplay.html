@@ -36,7 +36,7 @@
                 <form id="search-nickname" method="get" action="/loahub/pvp">
                     <input type="text" id="nickname" name="nickname" placeholder="닉네임 입력">
                     <input type="submit" value="검색">
-                    <p th:text="${information}"></p>
+                    
 
                 </form>
             </div>
@@ -59,11 +59,14 @@
 
                     <div class="pvp-info float--right">
                         <ul>
+
                             <li>
                                 <div class="seasonname">시즌:
                                     <div th:text="${seasonName}"></div>
                                 </div>
-                                <p class="competitive">경쟁전 </p>
+
+                                <div class="competitive">경쟁전 </div>
+                                
                                 <p class="rank">순위:
                                     <p th:text="${rank}"></p> 
                                 </p>

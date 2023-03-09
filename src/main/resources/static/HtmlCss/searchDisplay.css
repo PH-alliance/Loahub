@@ -71,9 +71,6 @@ body{
     
 }
 
-ul{
-    display: flex;
-}
 .character-info li{
     list-style: none;
 }
