@@ -48,6 +48,7 @@ public class UserTest {
                              Integer victoryCount, Integer loseCount, Integer tieCount, Integer killCount, Integer aceCount, Integer deathCount){
         this.characterName = characterName;
         this.ranking = ranking;
+        this.rankName = rankName;
         this.rankIcon = rankIcon;
         this.rankLastMmr = rankLastMmr;
         this.playCount = playCount;
