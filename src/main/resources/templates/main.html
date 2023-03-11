@@ -25,8 +25,6 @@
             <header class="section clearfix">
                 <div class="site-name">
                     <img src="./image/loahubIcon.JPG" alt="로아허브아이콘">
-                    <p th:text="${rank}"></p>
-                    <p th:text="${rankName}"></p>
                 </div>
             </header>
             <!-- VISUAL -->
@@ -34,7 +32,7 @@
                 <div class="search-form">
                     <form id="search-nickname" method="post" action="/loahub/pvp">
                         <input type="text" id="nickname" name ="nickname" placeholder="닉네임 입력">
-                        <input type="submit" value="검색">
+                        <input type="submit" value="검색" th:href="@{/searchDisplay}">
                     </form>
 
                 </div>

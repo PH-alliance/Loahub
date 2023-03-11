@@ -24,7 +24,6 @@ public class ColosseumsApiClient {
 
         try{
             //캐릭터이름을 url에 보내기위해 아스키코드로 인코딩
-            System.out.println(characterName);
             String encodeRes = URLEncoder.encode(characterName, "UTF-8");
             //헤더를 포함한 Url 만들기
             URL url = new URL(reqURL + encodeRes + "/colosseums");
@@ -36,6 +35,7 @@ public class ColosseumsApiClient {
             conn.setRequestProperty("Accept", "application/json; charset=UTF-8");
             //결과 코드가 200이라면 성공
             int responseCode = conn.getResponseCode();
+            //값 출력으로 확인
             System.out.println("responseCode : " + responseCode);
 
             //요청을 통해 얻어온 JSON타입 Response 메세지 읽어오기
@@ -70,6 +70,7 @@ public class ColosseumsApiClient {
 */
             JSONObject season3 = (JSONObject) colArr.get(3);
             JSONObject competitive = (JSONObject) season3.get("Competitive");
+            //값 출력으로 확인
             System.out.println(competitive);
         return competitive;
     }

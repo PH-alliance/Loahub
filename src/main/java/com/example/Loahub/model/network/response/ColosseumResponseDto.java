@@ -20,6 +20,7 @@ public class ColosseumResponseDto {
     class Competitive{
 
      */
+        private Long id;
         private String characterName;
         private Integer ranking;
         private String rankName;
