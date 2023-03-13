@@ -1,14 +1,8 @@
 package com.example.Loahub.controller.api;
 import com.example.Loahub.model.entity.UserTest;
-import com.example.Loahub.model.network.Header;
-import com.example.Loahub.model.network.request.ColosseumRequestDto;
-import com.example.Loahub.model.network.response.ColosseumResponseDto;
 import com.example.Loahub.model.repository.UserRepository;
 import com.example.Loahub.service.ColosseumApiService;
-import com.example.Loahub.service.ColosseumsApiClient;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
-import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -28,7 +21,7 @@ public class ColosseumApiController {
     UserRepository userRepository;
 
     @PostMapping("/pvp")
-    public String create(HttpServletRequest request,UserTest user, Model model) throws ParseException{
+    public String create(HttpServletRequest request, Model model) throws ParseException{
         //프론트에서 검색한 캐릭터이름을 db에 생성 or 이미 있다면 받아오기
         String characterName = request.getParameter("nickname");
        // colosseumApiService.read(characterName);

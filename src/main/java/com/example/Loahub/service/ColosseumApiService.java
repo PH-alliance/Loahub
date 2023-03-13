@@ -45,7 +45,7 @@ public class ColosseumApiService {
         System.out.println(user.getRankName());
         //여기까지는 값이 제대로 전달확인됨.
 
-        return user; //
+        return user;
         // 여기서 리턴 해줘도 전달이 안되는거같음. 어떻게 해결? 일단 이새끼가 문제인거 확실함.
         // response<User> 이런식으로 가거나 List<User> 이런식으로 리턴해주는거 시도해봐야겠음. << DB 내용 끌어다쓰려면 결국 List<UserTest>가 맞는거같긴함
         // 근데 List<UserTest>를 꼭 여기서 리턴해야하는가? 라는거에 대해선 굳이? 여기서 뭘 리턴해줘야할지 모르겠다.
