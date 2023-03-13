@@ -28,7 +28,7 @@ public class ColosseumApiController {
     UserRepository userRepository;
 
     @PostMapping("/pvp")
-    public String create(HttpServletRequest request,UserTest user, Model model) throws ParseException{
+    public String create(HttpServletRequest request, Model model) throws ParseException{
         //프론트에서 검색한 캐릭터이름을 db에 생성 or 이미 있다면 받아오기
         String characterName = request.getParameter("nickname");
        // colosseumApiService.read(characterName);
