@@ -1,14 +1,8 @@
 package com.example.Loahub.controller.api;
 import com.example.Loahub.model.entity.UserTest;
-import com.example.Loahub.model.network.Header;
-import com.example.Loahub.model.network.request.ColosseumRequestDto;
-import com.example.Loahub.model.network.response.ColosseumResponseDto;
 import com.example.Loahub.model.repository.UserRepository;
 import com.example.Loahub.service.ColosseumApiService;
-import com.example.Loahub.service.ColosseumsApiClient;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
-import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,7 +27,7 @@ public class ColosseumApiController {
         String characterName = request.getParameter("nickname");
        // colosseumApiService.read(characterName);
 
-       UserTest userTest = colosseumApiService.create(characterName);
+        UserTest userTest = colosseumApiService.create(characterName);
 
        //Controller 넘어오면서 데이터값이 모두 Null 이 됨.
 
@@ -43,17 +37,18 @@ public class ColosseumApiController {
         System.out.println(userTest.getRankName());
 
         model.addAttribute("characterName",characterName);
-        model.addAttribute("rank",userTest.getRanking());
-        model.addAttribute("rankName",userTest.getRankName());
-        model.addAttribute("rankIcon",userTest.getRankIcon());
-        model.addAttribute("rankLastMmr",userTest.getRankLastMmr());
-        model.addAttribute("playCount",userTest.getPlayCount());
-        model.addAttribute("victoryCount",userTest.getVictoryCount());
-        model.addAttribute("loseCount",userTest.getLoseCount());
-        model.addAttribute("tieCount",userTest.getTieCount());
-        model.addAttribute("killCount",userTest.getKillCount());
-        model.addAttribute("aceCount",userTest.getAceCount());
-        model.addAttribute("deathCount",userTest.getDeathCount());
+        model.addAttribute("rank", userTest.getRanking());
+        model.addAttribute("rankName", userTest.getRankName());
+        model.addAttribute("rankIcon", userTest.getRankIcon());
+        model.addAttribute("rankLastMmr", userTest.getRankLastMmr());
+        model.addAttribute("playCount", userTest.getPlayCount());
+        model.addAttribute("victoryCount", userTest.getVictoryCount());
+        model.addAttribute("loseCount", userTest.getLoseCount());
+        model.addAttribute("tieCount", userTest.getTieCount());
+        model.addAttribute("killCount", userTest.getKillCount());
+        model.addAttribute("aceCount", userTest.getAceCount());
+        model.addAttribute("deathCount", userTest.getDeathCount());
+        model.addAttribute("characterImage",userTest.getCharacterImage());
 
         return "searchDisplay";
     }

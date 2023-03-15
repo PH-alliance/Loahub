@@ -56,7 +56,44 @@ public class ColosseumsApiClient {
         return result;
     }
 
-    public JSONObject parseJSON(String result) throws ParseException{
+    public String readCharacter(String characterName){
+
+        String result = "";
+
+        try{
+            //캐릭터이름을 url에 보내기위해 아스키코드로 인코딩
+            String encodeRes = URLEncoder.encode(characterName, "UTF-8");
+            //헤더를 포함한 Url 만들기
+            URL url = new URL(reqURL + encodeRes + "/profiles");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+            conn.setRequestMethod("GET");
+            conn.setDoOutput(true);
+            conn.setRequestProperty("Authorization", "Bearer " + token);
+            conn.setRequestProperty("Accept", "application/json; charset=UTF-8");
+            //결과 코드가 200이라면 성공
+            int responseCode = conn.getResponseCode();
+            //값 출력으로 확인
+            System.out.println("responseCode : " + responseCode);
+
+            //요청을 통해 얻어온 JSON타입 Response 메세지 읽어오기
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String line = "";
+
+            while((line = br.readLine()) != null){
+                result += line;
+            }
+            // System.out.println("response body : " + result);
+
+            br.close();
+
+        } catch  (IOException e){
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public JSONObject parseCompetitive(String result) throws ParseException{
 
             JSONParser parser = new JSONParser();
             JSONObject object = (JSONObject) parser.parse(result);
@@ -74,5 +111,14 @@ public class ColosseumsApiClient {
             //값 출력으로 확인
             System.out.println(competitive);
         return competitive;
+    }
+
+    public String parseCharacter(String result) throws ParseException{
+        JSONParser parser = new JSONParser();
+        JSONObject object = (JSONObject) parser.parse(result);
+        String character = object.get("CharacterImage").toString();
+
+        System.out.println(character);
+        return character;
     }
 }

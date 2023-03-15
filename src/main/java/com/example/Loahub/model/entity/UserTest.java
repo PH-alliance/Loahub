@@ -36,6 +36,8 @@ public class UserTest {
     private Integer aceCount;
     private Integer deathCount;
 
+    private String characterImage;
+
     /*
     //추가기능
     private Integer victoryRate; //승률
@@ -44,8 +46,8 @@ public class UserTest {
     // Todo : 그래프기능 추가
      */
 
-    public UserTest (String characterName, Integer ranking, String rankName, String rankIcon, Integer rankLastMmr, Integer playCount,
-                             Integer victoryCount, Integer loseCount, Integer tieCount, Integer killCount, Integer aceCount, Integer deathCount){
+    public UserTest(String characterName, Integer ranking, String rankName, String rankIcon, Integer rankLastMmr, Integer playCount,
+                    Integer victoryCount, Integer loseCount, Integer tieCount, Integer killCount, Integer aceCount, Integer deathCount, String characterImage){
         this.characterName = characterName;
         this.ranking = ranking;
         this.rankName = rankName;
@@ -58,5 +60,6 @@ public class UserTest {
         this.killCount = killCount;
         this.aceCount = aceCount;
         this.deathCount = deathCount;
+        this.characterImage = characterImage;
     }
 }
