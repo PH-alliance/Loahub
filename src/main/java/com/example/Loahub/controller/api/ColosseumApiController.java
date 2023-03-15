@@ -36,7 +36,7 @@ import org.thymeleaf.engine.AttributeName;
 public class ColosseumApiController {
     private final ColosseumsApiClient colosseumsApiClient;
 
-    @GetMapping("/pvp")
+    @PostMapping("/pvp")
     public String searchForm(HttpServletRequest httpServletRequest, Model model) throws IOException  {   
         String nickname = httpServletRequest.getParameter("nickname");
         String reqURL = "https://developer-lostark.game.onstove.com/armories/characters/";
@@ -66,6 +66,8 @@ public class ColosseumApiController {
 
         // 시즌3 데이터 중 competitive의 데이터들 가져오기
         JSONObject season_3_competitive=(JSONObject)season_3.get("Competitive");
+
+        
 
         // 시즌3 competitive 요소들 출력 
         model.addAttribute("seasonName", season_3.get("SeasonName"));    
