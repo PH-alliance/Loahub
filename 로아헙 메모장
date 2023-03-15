@@ -1,11 +1,11 @@
 Github :
 지금 버전 저장해두고싶은데 버전관리방법 모름. 공부바람.
 
-Service :
-db에 저장이 되긴되는데 널값으로 저장해버려서 남는 데이터가 없음.
+DB :
+중복저장이슈 해결해야함
 
-Thymeleaf :
-Error resolving template [loahub/pvp], template might not exist or might not be accessible by any of the configured Template Resolvers
+Search :
+재검색하면 NullException 뱉음
 
 티어그래프 / mmr 계산기? / 필요하다싶은기능 일단 모두 만들어보기 / db 10분마다 업데이트 그런느낌
 ★postman 설치 -get post put delete 등등 추가공부
