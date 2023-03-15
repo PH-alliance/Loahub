@@ -34,7 +34,7 @@
             <div class="search-form float--right">
                 <form id="search-nickname" method="post" action="/loahub/pvp">
                     <input type="text" id="nickname" name ="nickname" placeholder="닉네임 입력">
-                    <input type="submit" value="검색">
+<input type="submit" value="검색">
 
                 </form>
             </div>
@@ -93,6 +93,9 @@
 
                                 <p class="deathcount">데스 수: </p>
                                 <p th:text = "${deathCount}"></p>
+
+                                <p class="characterImage">캐릭터 이미지: </p>
+                                <p th:text = "${characterImage}"></p>
 
                             </li>
                             <li>
