@@ -52,7 +52,7 @@ public class ColosseumApiService {
            userRepository.save(userTest);
 
         return userTest;
-        // 리턴을 List<UserTest> 로 바꿔주고 read 와 이지선다걸어서 model.addadttribute("list", list) 이런식으로 줘야할것같음.
+        // 리턴을 List<UserTest> 로 바꿔주고 read 와 이지선다걸어서 model.addadttribute("list", list) 이런식으로 줘야할것같음..
     }
 
 }

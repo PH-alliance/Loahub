@@ -34,6 +34,7 @@ public class ColosseumApiController {
         System.out.println(userTest.getCharacterName());
         System.out.println(userTest.getRanking());
         System.out.println(userTest.getRankName());
+        System.out.println(userTest.getCharacterImage());
 
         model.addAttribute("characterName",characterName);
         model.addAttribute("rank", userTest.getRanking());

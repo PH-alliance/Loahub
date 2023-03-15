@@ -112,6 +112,7 @@ public class ColosseumsApiClient {
         return competitive;
     }
 
+    // 캐릭터이미지 정보 파싱
     public String parseCharacter(String result) throws ParseException{
         JSONParser parser = new JSONParser();
         JSONObject object = (JSONObject) parser.parse(result);
