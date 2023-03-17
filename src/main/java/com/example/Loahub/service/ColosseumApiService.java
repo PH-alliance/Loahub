@@ -18,9 +18,9 @@ public class ColosseumApiService {
 
     public UserTest create(String characterName) throws ParseException{
         // 캐릭터 이름이 존재하면 값 불러오기
-       /* UserTest userTest = userRepository.findByCharacterName(characterName);
+       /* List<UserTest> userArr = userRepository.findByCharacterName(characterName);
 
-        if(userTest == null)
+        if(userArr == null)
         {*/
             // 그렇지않다면 db테이블에 생성
             String result = colosseumsApiClient.readUrl(characterName);

@@ -19,6 +19,7 @@ public class ColosseumsApiClient {
     private String token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyIsImtpZCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyJ9.eyJpc3MiOiJodHRwczovL2x1ZHkuZ2FtZS5vbnN0b3ZlLmNvbSIsImF1ZCI6Imh0dHBzOi8vbHVkeS5nYW1lLm9uc3RvdmUuY29tL3Jlc291cmNlcyIsImNsaWVudF9pZCI6IjEwMDAwMDAwMDAxMTI3MTUifQ.Oe1g04-1Vd3b5AGIGd4aVJuzbZr2wargshnTGhKqilDjkQ-M2OWIQO0avaCkPmuGwG5WrMuWK9Af5m5o-qNKe4shQccXMpOolMEWkTnme6so-r6I2u5G64OySCzBO7Tfe5ovpDmA0ZBgcZbTev8rWN7FdFNIgfHsU3g2Fk8r8hGIdxPMYJeFv1wFXHtvhpL7kmeTeWK3HX3M7sJZgNitJMX9gVSdavakjCdpV4o_7Rho6bPwcSmJ_Q0n4VQgUkWyvuEgjfFkAqp7JswZEXQxtspSfRZj0ST-gMR3dzlNno2JgQ-cpD7BA3oiROEgrNUP7t1DEMK6IKfG59f5khuvVg";
     private String reqURL = "https://developer-lostark.game.onstove.com/armories/characters/";
 
+    // 캐릭터 pvp 정보 참조
     public String readUrl(String characterName){
 
         String result = "";
@@ -56,6 +57,7 @@ public class ColosseumsApiClient {
         return result;
     }
 
+    // 캐릭터 이미지 링크 참조
     public String readCharacter(String characterName){
 
         String result = "";
@@ -93,6 +95,7 @@ public class ColosseumsApiClient {
         return result;
     }
 
+    // 캐릭터 pvp 정보 파싱
     public JSONObject parseCompetitive(String result) throws ParseException{
 
             JSONParser parser = new JSONParser();
@@ -113,6 +116,7 @@ public class ColosseumsApiClient {
         return competitive;
     }
 
+    // 캐릭터 이미지 파싱
     public String parseCharacter(String result) throws ParseException{
         JSONParser parser = new JSONParser();
         JSONObject object = (JSONObject) parser.parse(result);
