@@ -12,31 +12,29 @@
     <meta name="description" content="로스트아크 공식 api를 이용한 프로젝트">
 
     <!--구글 폰트 -->
-    <!-- <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
-    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
-    <link th:href="@{https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap}" rel="stylesheet"> -->
-    <link rel="stylesheet" th:href="@{/HtmlCss/searchDisplay.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/searchStyle.css">
 
 
 </head>
 
 <body>
-
     <div class="body__container">
 
         <!-- HEADER -->
-       
+
         <header class="section clearfix">
-        
+
             <div class="site-name float--left">
-                <a href="#"><img th:src="@{/image/loahubIcon.JPG}" alt="로아허브아이콘"></a>
+                <a href="#"><img th:src="@{image/loahubIcon.JPG}" alt="로아허브아이콘"></a>
             </div>
 
             <div class="search-form float--right">
-                <form id="search-nickname" method="get" action="/loahub/pvp">
-                    <input type="text" id="nickname" name="nickname" placeholder="닉네임 입력">
-                    <input type="submit" value="검색">
-                    <p th:text="${information}"></p>
+                <form id="search-nickname" method="post" action="/loahub/pvp">
+                    <input type="text" id="nickname" name ="nickname" placeholder="닉네임 입력">
+<input type="submit" value="검색">
 
                 </form>
             </div>
@@ -50,55 +48,54 @@
             <div class="inner clearfix">
                 <div class="character-info">
                     <div class="character-nickname">
-                        <p th:text="${nickname}"></p>
+                        <p th:text = "${characterName}"></p>
                     </div>
-                    <p></p>
-                    <div class="float--left">
-                        <img th:src="@{/image/testBardImage.png}" alt="캐릭터이미지" class="character-image">
+                    <div class="character-image float--left">
+                        <img th:src="@{image/test-avatar.png}" alt="캐릭터이미지">
                     </div>
 
                     <div class="pvp-info float--right">
                         <ul>
-                            
                             <li>
-                                <div class="seasonname">시즌:
-                                    <div th:text="${seasonName}"></div>
-                                </div>
-                                
+                                <p class="seasonname">시즌: </p>
                             </li>
                             <li>
-                                <p class="competitive">경쟁전 </p>
-                                <p class="rank">순위:
-                                    <p th:text="${rank}"></p> 
-                                </p>
-                                <p class="rankname">랭크: 
-                                    <p th:text="${rankName}"></p>
-                                </p>
+                                <p class="competitive">경쟁전: </p>
+                                <p class="rank">순위:</p>
+                                <p th:text="${rank}"></p>
+
+                                <p class="rankname">랭크:</p>
+                                <p th:text="${rankName}"></p>
+
                                 <img class="Rankicon" src="#" alt="랭크아이콘">
-                                <p class="ranklastmmr">시즌 마감 mmr: 
-                                    <p th:text="${ranklastmmr}"></p>
-                                </p>
-                                <p class="playcount">플레이 횟수:
-                                    <p th:text="${playcount}"></p>
-                                </p>
-                                <p class="victorycount">승리 수: 
-                                    <p th:text="${victorycount}"></p>
-                                </p>
-                                <p class="losecount">패배 수: 
-                                    <p th:text="${losecount}"></p>
-                                </p>
-                                <p class="tiecount">타이 카운트: 
-                                    <p th:text="${tiecount}"></p>
-                                </p>
-                                <p class="killcount">킬 수: 
-                                    <p th:text="${killcount}"></p>
-                                </p>
-                                <p class="acecount">에이스 횟수: 
-                                    <p th:text="acecount"></p>
-                                </p>
-                                <p class="deathcount">데스 수: 
-                                    <p th:text="deathcount"></p>
-                                </p>
+                                <p th:text="${rankIcon}"></p>
+
+                                <p class="ranklastmmr">시즌 마감 mmr: </p>
+                                <p th:text ="${rankLastMmr}"></p>
+
+                                <p class="playcount">플레이 횟수: </p>
+                                <p th:text = "${playCount}"></p>
+
+                                <p class="victorycount">승리 수:  </p>
+                                <p th:text = "${victoryCount}"></p>
+
+                                <p class="losecount">패배 수: </p>
+                                <p th:text = "${loseCount}"></p>
+
+                                <p class="tiecount">타이 카운트:</p>
+                                <p th:text = "${tieCount}"></p>
+
+                                <p class="killcount">킬 수: </p>
+                                <p th:text = "${killCount}"></p>
+
+                                <p class="acecount">에이스 횟수: </p>
+                                <p th:text = "${aceCount}"></p>
+
+                                <p class="deathcount">데스 수: </p>
+                                <p th:text = "${deathCount}"></p>
+
+                                <p class="characterImage">캐릭터 이미지: </p>
+                                <p th:text = "${characterImage}"></p>
 
                             </li>
                             <li>

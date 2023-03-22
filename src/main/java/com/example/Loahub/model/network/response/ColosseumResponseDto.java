@@ -1,18 +1,28 @@
 package com.example.Loahub.model.network.response;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class ColosseumResponseDto {
+    /*
     private String seasonName;
     private Competitive[] competitive;
     private TeamDeathmatch[] teamDeathmatches;
     private Deathmatch[] deathmatch;
     private TeamElimination[]     teamElimination;
     private CoOpBattle[] coOpBattle;
-
     @Data
     class Competitive{
-        private Integer rank;
+
+     */
+        private Long id;
+        private String characterName;
+        private Integer ranking;
         private String rankName;
         private String rankIcon;
         private Integer rankLastMmr;
@@ -23,6 +33,7 @@ public class ColosseumResponseDto {
         private Integer killCount;
         private Integer aceCount;
         private Integer deathCount;
+        /*
     }
 
     @Data
@@ -75,4 +86,6 @@ public class ColosseumResponseDto {
         private Integer aceCount;
         private Integer deathCount;
     }
+
+ */
 }
