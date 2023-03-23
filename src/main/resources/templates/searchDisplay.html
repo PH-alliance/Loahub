@@ -50,11 +50,11 @@
             <div class="inner clearfix">
                 <div class="character-info">
                     <div class="character-nickname">
-                        <p th:text="${nickname}"></p>
+                        <p th:text="${characterName}"></p>
                     </div>
                     <p></p>
                     <div class="float--left">
-                        <img th:src="@{/image/testBardImage.png}" alt="캐릭터이미지" class="character-image">
+                        <img th:src="${characterImage}" alt="캐릭터이미지" class="character-image">
                     </div>
 
                     <div class="pvp-info float--right">
@@ -86,49 +86,49 @@
                                                           
                                 <p>
                                     <div class="ranklastmmr">시즌 마감 mmr:
-                                        <div th:text="${ranklastmmr}"></div>
+                                        <div th:text="${rankLastMmr}"></div>
                                     </div>
                                 </p>
 
                                 <p>
                                     <div class="playcount">플레이 횟수:
-                                        <div th:text="${playcount}"></div>
+                                        <div th:text="${playCount}"></div>
                                     </div>
                                 </p>
 
                                 <p>
                                     <div class="victorycount">승리 수:
-                                        <div th:text="${victorycount}"></div>
+                                        <div th:text="${victoryCount}"></div>
                                     </div>
                                 </p>
 
                                 <p>
                                     <div class="losecount">패배 수:
-                                        <div th:text="${losecount}"></div>
+                                        <div th:text="${loseCount}"></div>
                                     </div>
                                 </p>
 
                                 <p>
                                     <div class="tiecount">타이 카운트:
-                                        <div th:text="${tiecount}"></div>
+                                        <div th:text="${tieCount}"></div>
                                     </div>
                                 </p>
 
                                 <p>
                                     <div class="killcount">킬 수:
-                                        <div th:text="${killcount}"></div>
+                                        <div th:text="${killCount}"></div>
                                     </div>
                                 </p>
 
                                 <p>
                                     <div class="acecount">에이스 횟수:
-                                        <div th:text="${acecount}"></div>
+                                        <div th:text="${aceCount}"></div>
                                     </div>
                                 </p>
 
                                 <p>
                                     <div class="deathcount">데스 수:
-                                        <div th:text="${deathcount}"></div>
+                                        <div th:text="${deathCount}"></div>
                                     </div>
                                 </p>
                                                      
