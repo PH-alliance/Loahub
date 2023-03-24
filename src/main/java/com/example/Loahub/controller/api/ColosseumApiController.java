@@ -32,7 +32,14 @@ public class ColosseumApiController {
         String characterName = request.getParameter("nickname");
        // colosseumApiService.read(characterName);
 
-        UserTest userTest = colosseumApiService.create(characterName);
+        UserTest userTest;
+        // colosseumApiService.read(characterName);
+
+        if (userRepository.findByCharacterName(characterName).isPresent()) {
+            userTest = colosseumApiService.read(characterName);
+        } else {
+            userTest = colosseumApiService.create(characterName);
+        }
 
        //Controller 넘어오면서 데이터값이 모두 Null 이 됨.
 
