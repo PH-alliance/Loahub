@@ -39,7 +39,7 @@ public class ColosseumsApiClient {
             System.out.println("responseCode : " + responseCode);
 
             //요청을 통해 얻어온 JSON타입 Response 메세지 읽어오기
-            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(),"UTF-8"));
             String line = "";
 
             while((line = br.readLine()) != null){
@@ -80,7 +80,7 @@ public class ColosseumsApiClient {
             System.out.println("responseCode : " + responseCode);
 
             //요청을 통해 얻어온 JSON타입 Response 메세지 읽어오기
-            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(),"UTF-8"));
             String line = "";
 
             while((line = br.readLine()) != null){
@@ -100,6 +100,7 @@ public class ColosseumsApiClient {
 
         JSONParser parser = new JSONParser();
         JSONObject object = (JSONObject) parser.parse(result); // Todo: 그런데 왜 여기에 null 들어가는가? result는 string형태로 잘 넘어온것이 확인됨
+
         JSONArray colArr = (JSONArray) object.get("Colosseums"); // 혹은 여기부터 널값발생지점으로 문제발생 추정
 
         /*
