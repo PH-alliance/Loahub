@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
+import java.util.List;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/loahub")
@@ -21,38 +25,43 @@ public class ColosseumApiController {
     UserRepository userRepository;
 
     @PostMapping("/pvp")
-    public String create(HttpServletRequest request, Model model) throws ParseException{
+    public String create(HttpServletRequest request, Model model) throws ParseException {
         //프론트에서 검색한 캐릭터이름을 db에 생성 or 이미 있다면 받아오기
         String characterName = request.getParameter("nickname");
-       // colosseumApiService.read(characterName);
+        UserTest userTest;
+        // colosseumApiService.read(characterName);
 
-        UserTest userTest = colosseumApiService.create(characterName);
+        if (userRepository.findByCharacterName(characterName).isPresent()) {
+            userTest = colosseumApiService.read(characterName);
+        } else {
+            userTest = colosseumApiService.create(characterName);
+        }
+            //Controller 넘어오면서 데이터값이 모두 Null 이 됨.
 
-       //Controller 넘어오면서 데이터값이 모두 Null 이 됨.
+            //출력으로 확인
+            System.out.println(userTest.getCharacterName());
+            System.out.println(userTest.getRanking());
+            System.out.println(userTest.getRankName());
 
-        //출력으로 확인
-        System.out.println(userTest.getCharacterName());
-        System.out.println(userTest.getRanking());
-        System.out.println(userTest.getRankName());
-        System.out.println(userTest.getCharacterImage());
 
-        model.addAttribute("characterName",characterName);
-        model.addAttribute("rank", userTest.getRanking());
-        model.addAttribute("rankName", userTest.getRankName());
-        model.addAttribute("rankIcon", userTest.getRankIcon());
-        model.addAttribute("rankLastMmr", userTest.getRankLastMmr());
-        model.addAttribute("playCount", userTest.getPlayCount());
-        model.addAttribute("victoryCount", userTest.getVictoryCount());
-        model.addAttribute("loseCount", userTest.getLoseCount());
-        model.addAttribute("tieCount", userTest.getTieCount());
-        model.addAttribute("killCount", userTest.getKillCount());
-        model.addAttribute("aceCount", userTest.getAceCount());
-        model.addAttribute("deathCount", userTest.getDeathCount());
-        model.addAttribute("characterImage",userTest.getCharacterImage());
+            model.addAttribute("characterName", characterName);
+            model.addAttribute("rank", userTest.getRanking());
+            model.addAttribute("rankName", userTest.getRankName());
+            model.addAttribute("rankIcon", userTest.getRankIcon());
+            model.addAttribute("rankLastMmr", userTest.getRankLastMmr());
+            model.addAttribute("playCount", userTest.getPlayCount());
+            model.addAttribute("victoryCount", userTest.getVictoryCount());
+            model.addAttribute("loseCount", userTest.getLoseCount());
+            model.addAttribute("tieCount", userTest.getTieCount());
+            model.addAttribute("killCount", userTest.getKillCount());
+            model.addAttribute("aceCount", userTest.getAceCount());
+            model.addAttribute("deathCount", userTest.getDeathCount());
+            model.addAttribute("characterImage", userTest.getCharacterImage());
+
 
         return "searchDisplay";
     }
-
+}
     /*
     @GetMapping("/pvp")
     public String search(UserTest user, Model model) throws ParseException{
@@ -77,4 +86,5 @@ public class ColosseumApiController {
 
    }
 */
-}
+
+

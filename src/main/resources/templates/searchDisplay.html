@@ -15,7 +15,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/searchStyle.css">
+    <link rel="stylesheet" th:href="@{/HtmlCss/searchStyle.css}" type="text/css">
+    <!-- <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap}" rel="stylesheet"> -->
+    <link rel="stylesheet" th:href="@{/HtmlCss/searchDisplay.css}">
 
 
 </head>
@@ -33,15 +37,15 @@
 
             <div class="search-form float--right">
                 <form id="search-nickname" method="post" action="/loahub/pvp">
-                    <input type="text" id="nickname" name ="nickname" placeholder="닉네임 입력">
-<input type="submit" value="검색">
+
+                    <input type="text" id="nickname" name = "nickname" placeholder="닉네임 입력">
+                    <a href="#"><img th:src="@{src\main\resources\static\image\loahubIcon.JPG}" alt="로아허브아이콘"></a>
 
                 </form>
             </div>
-
         </header>
 
-
+    <div class="body__container">
 
         <!-- VISUAL -->
         <section class="section section--visual">
@@ -52,6 +56,12 @@
                     </div>
                     <div class="character-image float--left">
                         <img th:src="@{image/test-avatar.png}" alt="캐릭터이미지">
+                        <img th:src="@{/image/loahubIcon.JPG}" alt="캐릭터이미지">
+                        <p th:text="${nickname}"></p>
+                    </div>
+                    <p></p>
+                    <div class="float--left">
+                        <img th:src="@{/image/testBardImage.png}" alt="캐릭터이미지" class="character-image">
                     </div>
 
                     <div class="pvp-info float--right">
@@ -97,31 +107,13 @@
                                 <p class="characterImage">캐릭터 이미지: </p>
                                 <p th:text = "${characterImage}"></p>
 
-                            </li>
-                            <li>
-                                <p class="teamdeathmatch">팀 데스매치:</p>
-                            </li>
-                            <li>
-                                <p class="deathmatch">데스매치: </p>
-                            </li>
-                            <li>
-                                <p class="teamelimination">올킬 횟수: </p>
-                            </li>
-                            <li>
-                                <p class="coopbattle">coopbattle?</p>
-                            </li>
                         </ul>
                     </div>
 
                 </div>
-
-
-
             </div>
         </section>
-
-
-
+    </div>
     </div>
 </body>
 
