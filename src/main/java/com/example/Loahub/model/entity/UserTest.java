@@ -23,7 +23,6 @@ public class UserTest {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    
     private String characterName;
     private Integer ranking;
     private String rankName;

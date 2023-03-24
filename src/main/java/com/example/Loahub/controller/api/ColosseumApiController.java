@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
+import java.util.List;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/loahub")
@@ -21,6 +26,7 @@ public class ColosseumApiController {
     UserRepository userRepository;
 
     @PostMapping("/pvp")
+
     public String create(HttpServletRequest request, Model model) throws ParseException{
         //프론트에서 검색한 캐릭터이름을 db에 생성 or 이미 있다면 받아오기
         String characterName = request.getParameter("nickname");
@@ -77,4 +83,6 @@ public class ColosseumApiController {
 
    }
 */
+
 }
+
