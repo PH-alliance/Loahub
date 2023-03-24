@@ -51,74 +51,21 @@ body{
     padding-left: 50%;
 }
 
-.character-info .character-image{
+.character-image{
 
     
-    width: 100%;
-    height: 708px;    
+    width: 50%;    
     box-sizing: border-box;
     overflow: hidden;
 }
-
 
 .pvp-info{
     font-size:17px;
     width: 40%;
     margin-bottom: 20px;
-
-    box-sizing: border-box; 
-    display: flex;
-   
-}
-
-.seasonname
-{
-    display: flex;
-}
-
-.rank{
-    display: flex;
-}
-
-.rankname{
-    display: flex;
-}
-
-.Rankicon{
-    display: flex;
-}
-
-.ranklastmmr{
-    display: flex;
-}
-
-.playcount{
-    display: flex;
-}
-
-.victorycount{
-    display: flex;
-}
-
-.losecount{
-    display: flex;
-}
-
-.tiecount{
-    display: flex;
-}
-
-
-.killcount{
-    display: flex;
-}
-
-.acecount{
-    display: flex;
-}
-
-.deathcount{
-    display: flex;
+    box-sizing: border-box;
+    
+    
 }
 
 

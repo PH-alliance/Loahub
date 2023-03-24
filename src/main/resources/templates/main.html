@@ -30,16 +30,18 @@
             <!-- HEADER -->
             <header class="section clearfix">
                 <div class="site-name" style="background-color: orange;">
-                    <img th:src="@{/image/loahubIcon.JPG}" alt="로아허브아이콘">
+                    <a href="/loahub"><img th:src="@{/image/loahubIcon.JPG}" alt="로아허브아이콘"> </a>
                 </div>
             </header>
 
             <!-- VISUAL -->
             <section class="section section--visual clearfix">
                 <div class="search-form">
+
                     <form id="search-nickname" method="post" action="/loahub/pvp">
                         <input type="text" id="nickname" name ="nickname" placeholder="닉네임 입력">
                         <input type="submit" value="검색" th:href="@{/searchDisplay}">
+
                     </form>
                     <script>
 

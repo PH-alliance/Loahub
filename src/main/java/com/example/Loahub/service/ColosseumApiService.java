@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class ColosseumApiService {
@@ -17,12 +17,14 @@ public class ColosseumApiService {
     @Autowired
     UserRepository userRepository;
 
-    public UserTest create(String characterName) throws ParseException {
+
+    public UserTest create(String characterName) throws ParseException{
         // 캐릭터 이름이 존재하면 값 불러오기
+       /* UserTest userTest = userRepository.findByCharacterName(characterName);
 
-        //return userRepository.findByCharacterName(characterName)
+        if(userTest == null)
+        {*/
 
-        {
             // 그렇지않다면 db테이블에 생성
             String result = colosseumsApiClient.readUrl(characterName);
             JSONObject competitive = colosseumsApiClient.parseCompetitive(result);
@@ -32,6 +34,7 @@ public class ColosseumApiService {
 
             UserTest userTest = new UserTest();
             userTest.setCharacterName(characterName)
+
                     .setRanking(Integer.parseInt(String.valueOf(competitive.get("Rank"))))
                     .setRankName(competitive.get("RankName").toString())
                     .setRankIcon(competitive.get("RankIcon").toString())
@@ -50,6 +53,7 @@ public class ColosseumApiService {
         // 근데 List<UserTest>를 꼭 여기서 리턴해야하는가? 라는거에 대해선 굳이? 여기서 뭘 리턴해줘야할지 모르겠다.
         // 강의 빠르게 보면서 참고해야할것같음.
             //DB에 저장되는 순간.
+
             userRepository.save(userTest);
 
 
@@ -79,4 +83,5 @@ public class ColosseumApiService {
 
         return userTest;
     }
+
 }

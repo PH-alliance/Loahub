@@ -32,14 +32,18 @@
         <header class="section clearfix">
 
             <div class="site-name float--left">
-                <a href="#"><img th:src="@{image/loahubIcon.JPG}" alt="로아허브아이콘"></a>
+
+                <a href="/loahub"><img th:src="@{/image/loahubIcon.JPG}" alt="로아허브아이콘"></a>
+
             </div>
 
             <div class="search-form float--right">
                 <form id="search-nickname" method="post" action="/loahub/pvp">
 
-                    <input type="text" id="nickname" name = "nickname" placeholder="닉네임 입력">
-                    <a href="#"><img th:src="@{src\main\resources\static\image\loahubIcon.JPG}" alt="로아허브아이콘"></a>
+                    <input type="text" id="nickname" name="nickname" placeholder="닉네임 입력">
+                    <input type="submit" value="검색">
+                    
+
 
                 </form>
             </div>
@@ -52,36 +56,102 @@
             <div class="inner clearfix">
                 <div class="character-info">
                     <div class="character-nickname">
-                        <p th:text = "${characterName}"></p>
-                    </div>
-                    <div class="character-image float--left">
-                        <img th:src="@{image/test-avatar.png}" alt="캐릭터이미지">
-                        <img th:src="@{/image/loahubIcon.JPG}" alt="캐릭터이미지">
-                        <p th:text="${nickname}"></p>
+
+                        <p th:text="${characterName}"></p>
+
                     </div>
                     <p></p>
                     <div class="float--left">
-                        <img th:src="@{/image/testBardImage.png}" alt="캐릭터이미지" class="character-image">
+                        <img th:src="${characterImage}" alt="캐릭터이미지" class="character-image">
                     </div>
 
                     <div class="pvp-info float--right">
                         <ul>
+
+
                             <li>
-                                <p class="seasonname">시즌: </p>
+                                <p>
+                                    <div class="seasonname">시즌:
+                                        <div th:text="${seasonName}"><br></div>
+                                    </div>
+                                </p>
+
+                                <div class="competitive">경쟁전 </div>
+                                
+                                <p>
+                                    <div class="rank">순위:
+                                        <div th:text="${rank}"></div>
+                                    </div>
+                                </p>
+
+                                <p>
+                                    <div class="rankname">랭크:
+                                        <div th:text="${rankName}"></div>
+                                         <img class="Rankicon" th:src="${rankIcon}" alt="랭크아이콘">
+                                    </div>
+                                </p>
+                                
+                               
+                                                          
+                                <p>
+                                    <div class="ranklastmmr">시즌 마감 mmr:
+                                        <div th:text="${rankLastMmr}"></div>
+                                    </div>
+                                </p>
+
+                                <p>
+                                    <div class="playcount">플레이 횟수:
+                                        <div th:text="${playCount}"></div>
+                                    </div>
+                                </p>
+
+                                <p>
+                                    <div class="victorycount">승리 수:
+                                        <div th:text="${victoryCount}"></div>
+                                    </div>
+                                </p>
+
+                                <p>
+                                    <div class="losecount">패배 수:
+                                        <div th:text="${loseCount}"></div>
+                                    </div>
+                                </p>
+
+                                <p>
+                                    <div class="tiecount">타이 카운트:
+                                        <div th:text="${tieCount}"></div>
+                                    </div>
+                                </p>
+
+                                <p>
+                                    <div class="killcount">킬 수:
+                                        <div th:text="${killCount}"></div>
+                                    </div>
+                                </p>
+
+                                <p>
+                                    <div class="acecount">에이스 횟수:
+                                        <div th:text="${aceCount}"></div>
+                                    </div>
+                                </p>
+
+                                <p>
+                                    <div class="deathcount">데스 수:
+                                        <div th:text="${deathCount}"></div>
+                                    </div>
+                                </p>
+                                                     
+                                <!-- <div class="teamdeathmatch">팀 데스매치:</div>
+                                                   
+                                <div class="deathmatch">데스매치: </div>
+                                                     
+                                <div class="teamelimination">올킬 횟수: </div>
+                                                       
+                                <div class="coopbattle">coopbattle?</div> -->
                             </li>
-                            <li>
-                                <p class="competitive">경쟁전: </p>
-                                <p class="rank">순위:</p>
-                                <p th:text="${rank}"></p>
+                        </ul>
+                    </div>
 
-                                <p class="rankname">랭크:</p>
-                                <p th:text="${rankName}"></p>
-
-                                <img class="Rankicon" src="#" alt="랭크아이콘">
-                                <p th:text="${rankIcon}"></p>
-
-                                <p class="ranklastmmr">시즌 마감 mmr: </p>
-                                <p th:text ="${rankLastMmr}"></p>
 
                                 <p class="playcount">플레이 횟수: </p>
                                 <p th:text = "${playCount}"></p>
