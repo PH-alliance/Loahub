@@ -20,7 +20,6 @@ public class ColosseumsApiClient {
 
     // 캐릭터 pvp 정보 참조
     public String readUrl(String characterName){
-
         String result = "";
 
         try{
@@ -54,10 +53,12 @@ public class ColosseumsApiClient {
             e.printStackTrace();
         }
 
+
         return result;
     }
 
     // 캐릭터 이미지 링크 참조
+
     public String readCharacter(String characterName){
 
         String result = "";
@@ -99,10 +100,9 @@ public class ColosseumsApiClient {
     // 캐릭터 pvp 정보 파싱
     public JSONObject parseCompetitive(String result) throws ParseException{
 
-            JSONParser parser = new JSONParser();
-            JSONObject object = (JSONObject) parser.parse(result);
-            JSONArray colArr = (JSONArray) object.get("Colosseums");
-            //colArr 값 확인
+        JSONParser parser = new JSONParser();
+        JSONObject object = (JSONObject) parser.parse(result); // Todo: 그런데 왜 여기에 null 들어가는가? result는 string형태로 잘 넘어온것이 확인됨
+        JSONArray colArr = (JSONArray) object.get("Colosseums"); // 혹은 여기부터 널값발생지점으로 문제발생 추정
 
         /*
             //NullPointerException 발생 구간. colArr가 널값이라 colArr.size()를 인식할수없다. 왜 널값이 뜨는지에 대해 찾아야함.
@@ -110,14 +110,16 @@ public class ColosseumsApiClient {
                 object = (JSONObject) colArr.get(i);
             }
 */
-            JSONObject season3 = (JSONObject) colArr.get(3);
-            JSONObject competitive = (JSONObject) season3.get("Competitive");
-            //값 출력으로 확인
-            System.out.println(competitive);
+        JSONObject season3 = (JSONObject) colArr.get(3);
+        JSONObject competitive = (JSONObject) season3.get("Competitive");
+        //값 출력으로 확인
+        System.out.println(competitive);
         return competitive;
     }
 
+
     // 캐릭터 이미지 파싱
+
     public String parseCharacter(String result) throws ParseException{
         JSONParser parser = new JSONParser();
         JSONObject object = (JSONObject) parser.parse(result);

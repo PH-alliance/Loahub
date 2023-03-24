@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+
 import java.util.List;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,6 +43,7 @@ public class ColosseumApiController {
             System.out.println(userTest.getRanking());
             System.out.println(userTest.getRankName());
 
+
             model.addAttribute("characterName", characterName);
             model.addAttribute("rank", userTest.getRanking());
             model.addAttribute("rankName", userTest.getRankName());
@@ -55,6 +57,7 @@ public class ColosseumApiController {
             model.addAttribute("aceCount", userTest.getAceCount());
             model.addAttribute("deathCount", userTest.getDeathCount());
             model.addAttribute("characterImage", userTest.getCharacterImage());
+
 
         return "searchDisplay";
     }
