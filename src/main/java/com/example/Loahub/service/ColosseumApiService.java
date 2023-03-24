@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -61,7 +62,7 @@ public class ColosseumApiService {
             // 리턴을 List<UserTest> 로 바꿔주고 read 와 이지선다걸어서 model.addadttribute("list", list) 이런식으로 줘야할것같음.
         }
 
-    }
+    
 
     public UserTest read(String characterName){
         UserTest userTest = new UserTest();
@@ -83,5 +84,5 @@ public class ColosseumApiService {
 
         return userTest;
     }
-
 }
+
